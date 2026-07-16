@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akt:wght@100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Notch:wght@200..700&display=swap');
+
+.formacion-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.tecnologias {
+    width: 80%;
+}
+
+.tecn-img {
+    width: 100px;
+    height: 100px;
+}
+
+.title-formacion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.subtitle {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.subtitle::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #4b43df;
+}
+
+.tarjeta-tecn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 120px;
+    border: 1px solid;
+    border-color: #9ee480;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    flex-direction: column;
+    background-color: rgba(238, 238, 238, 0.807);
+}
+
+.icono {
+    padding: 8px;
+    border-radius: 20px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(188, 183, 183);
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.icono:hover {
+    transform: translateY(-4px);
+    box-shadow: 1px 4px 4px 1px rgb(188, 183, 183);
+}
+
+.text-icono {
+    padding-top: 10px;
+    font-family: "Akt", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    color: rgb(63, 61, 61);
+}
+
+/* ============================== */
+/* 📱 RESPONSIVE                  */
+/* ============================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .tecnologias {
+    width: 90%;
+  }
+
+  .tarjeta-tecn {
+    width: 22%; /* 4 tarjetas siguen entrando, un poco más anchas */
+    height: 110px;
+  }
+
+  .title-formacion {
+    font-size: 28px;
+  }
+}
+
+/* Mobile — pasa a grid de 2 columnas */
+@media (max-width: 1050px) {
+  .formacion-cont {
+    height: auto;
+    min-height: 100vh;
+    padding: 80px 0 40px;
+  }
+
+  .tecnologias {
+    width: 90%;
+  }
+
+  .title-formacion {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .tarjeta-tecn {
+    width: 100%; /* el grid maneja el ancho, no flex */
+    height: 100px;
+    margin-bottom: 0; /* el gap del grid ya da el espacio */
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+  }
+
+  .icono svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .text-icono {
+    font-size: 13px;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 420px) {
+  .tarjeta-tecn {
+    height: 90px;
+  }
+
+  .title-formacion {
+    font-size: 20px;
+  }
+
+  .icono svg {
+    width: 28px;
+    height: 28px;
+  }
+}

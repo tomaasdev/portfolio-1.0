@@ -1,0 +1,330 @@
+.contacto-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.redes-info {
+  width: 30%;
+  height: 70%;
+  border: solid 0px;
+  border-radius: 5px 0px 0px 5px;
+  background-color: #4b43df;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.formulario-contacto {
+  width: 50%;
+  height: 70%;
+  border: solid 1px;
+  border-radius: 0px 5px 5px 0px;
+  padding: 1rem;
+  border-color: #9ee480;
+}
+
+.formulario-conteiner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-cont-1 {
+  width: 70%;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub-1 {
+  width: 100%;
+}
+
+.input-cont-2 {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.input-normal-1 {
+  border: 0.1px solid;
+  border-radius: 5px;
+  border-color: rgb(157, 157, 157);
+  width: 90%;
+  height: 3vh;
+}
+
+.input-normal-2 {
+  border: 0.1px solid;
+  border-radius: 5px;
+  border-color: rgb(157, 157, 157);
+  width: 95%;
+  height: 10vh;
+}
+
+.titulo-input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.contacto-titulo {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  font-size: 50px;
+  color: #9ee480;
+}
+
+.contacto-descr {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  color: #9ee480;
+  font-size: 20px;
+}
+
+.redes-contacto {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+
+}
+
+
+.tarjeta-peq {
+  justify-content: center;
+}
+
+.tarjeta-peq {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: #9ee480;
+  text-decoration: none;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tarjeta-peq:hover {
+  background-color: #afdd9b;
+  transform: translateY(-4px);
+}
+
+.red-name {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 5px;
+  color: #4b43df;
+}
+
+/* ── BOTÓN BASE ── */
+.boton-contacto {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  height: 3rem;
+  background-color: #4b43df;
+  border: none;
+  border-radius: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #9ee480;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-contacto:hover:not(:disabled) {
+  background-color: #554ee2;
+}
+
+.boton-contacto:disabled {
+  cursor: not-allowed;
+}
+
+.icono-avion {
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: none;
+}
+
+.enviando .icono-avion {
+  position: absolute;
+  left: 16px;
+  animation: volar 1.2s ease-in forwards;
+}
+
+@keyframes volar {
+  0% {
+    left: 16px;
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  60% {
+    opacity: 1;
+    transform: rotate(-25deg) scale(1.3);
+  }
+
+  100% {
+    left: 110%;
+    opacity: 0;
+    transform: rotate(-30deg) scale(0.7);
+  }
+}
+
+.boton-texto {
+  transition: opacity 0.2s ease;
+}
+
+.enviando .boton-texto {
+  opacity: 0.3;
+}
+
+.enviado {
+  background-color: #2a7a2a;
+}
+
+.enviado .icono-avion {
+  display: none;
+}
+
+.error-msg {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+/* ============================== */
+/* 📱 RESPONSIVE                  */
+/* ============================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .redes-info {
+    width: 35%;
+  }
+
+  .formulario-contacto {
+    width: 55%;
+  }
+
+  .contacto-titulo {
+    font-size: 38px;
+  }
+
+  .contacto-descr {
+    font-size: 17px;
+  }
+}
+
+/* Mobile — apila las dos columnas */
+@media (max-width: 1050px) {
+  .contacto-cont {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 60px 16px 40px;
+  }
+
+  .redes-info {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  .formulario-contacto {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 10px 10px;
+    padding: 24px 16px;
+  }
+
+  .contacto-titulo {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .contacto-descr {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .redes-contacto {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .formulario-conteiner {
+    height: auto;
+  }
+
+  .input-cont-1 {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .input-cont-2 {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .input-normal-1 {
+    width: 100%;
+    height: 5vh;
+  }
+
+  .input-normal-2 {
+    width: 100%;
+    height: 12vh;
+  }
+
+  .titulo-input {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    letter-spacing: 0.15rem;
+  }
+
+  .boton-contacto {
+    width: 100%;
+    font-size: 17px;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 420px) {
+  .contacto-titulo {
+    font-size: 24px;
+  }
+
+  .red-name {
+    font-size: 13px;
+  }
+
+  .tarjeta-peq {
+    padding: 6px 8px;
+  }
+}

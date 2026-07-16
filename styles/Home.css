@@ -1,0 +1,183 @@
+.cont-body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.desc-cont-1 {
+    width: 70%;
+    background-color: #4b43df;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-cont-2 {
+    width: 30%;
+    background-color: #9ee480;
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-around;
+}
+
+.title-desc {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #9ee480;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.desc {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(239, 221, 221);
+    font-size: 20px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    width: 80%;
+}
+
+.img-cv {
+    top: 250px;
+    left: 62%;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+}
+
+.header-cont {
+    padding: 40px;
+    display: flex;
+    align-content: bottom;
+    justify-content: space-between;
+}
+
+.tr {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    color: #9ee480;
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text-navbar {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    width: 30%;
+    padding-top: 10px;
+    color: rgb(36, 36, 180);
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+
+.double-desc {
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    color: #9ee480;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+/* ============================== */
+/* 📱 RESPONSIVE                  */
+/* ============================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .title-desc {
+    font-size: 38px;
+  }
+
+  .desc {
+    margin-top: 140px;
+    font-size: 18px;
+  }
+
+  .img-cv {
+    width: 220px;
+    height: 300px;
+    left: 65%;
+    top: 200px;
+  }
+
+  .tr {
+    font-size: 2.2rem;
+    top: 40px;
+    left: 40px;
+  }
+}
+
+/* Mobile — acá se rompe el layout horizontal */
+@media (max-width: 1050px) {
+  .cont-body {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .desc-cont-1 {
+    width: 100%;
+    padding: 100px 20px 40px;
+  }
+
+  .desc-cont-2 {
+    width: 100%;
+    padding: 40px 20px;
+    justify-content: center;
+  }
+
+  .tr {
+    position: static; /* deja de ser absoluto, sigue el flujo normal */
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .title-desc {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .desc {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .double-desc {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .img-cv {
+    position: static; /* deja de ser absoluta */
+    width: 200px;
+    height: 270px;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 420px) {
+  .title-desc {
+    font-size: 24px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .img-cv {
+    width: 160px;
+    height: 220px;
+  }
+}

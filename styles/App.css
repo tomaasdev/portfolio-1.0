@@ -1,0 +1,18 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+/* ✅ Global anti-overflow */
+*, *::before, *::after {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+@media (max-width: 1050px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
