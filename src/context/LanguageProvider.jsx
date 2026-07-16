@@ -1,6 +1,6 @@
 // src/context/LanguageProvider.jsx
 import { useState } from "react";
-import { LanguageContext } from "./LanguageContext";
+import { LanguageContext } from "./languageContext";
 import { translations } from "../Translation";
 
 export const LanguageProvider = ({ children }) => {
