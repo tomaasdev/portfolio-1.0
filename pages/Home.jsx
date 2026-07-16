@@ -40,7 +40,7 @@ function Home() {
         </div>
       </div>
       <div className="desc-cont-2">
-        <img src="../public/images/foto cv.jpeg" className="img-cv" />
+        <img src="../public/images/foto-cv.jpeg" className="img-cv" />
       </div>
     </div>
   );
